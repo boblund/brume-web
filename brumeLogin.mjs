@@ -37,7 +37,7 @@ function userPassAuth( username, password ) {
 				} );
 			},
 			onFailure: function( err ) {
-				rej ( { error: err } );
+				res ( { error: err } );
 			}
 		} );
 	} );
