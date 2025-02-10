@@ -6,7 +6,6 @@
   "scripts": {
     "mv_cognito": "mv -f node_modules/amazon-cognito-identity-js/dist/amazon-cognito-identity.min.js amazon-cognito-identity.min.js",
     "rm-node_modules": "rm -rf node_modules",
-    "postinstall": "npm run mv_cognito && npm run rm-node_modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bob Lund",
