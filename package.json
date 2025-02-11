@@ -4,6 +4,8 @@
   "description": "Brume web files",
   "main": "index.mjs",
   "scripts": {
+		"cp-minjs": "cp -f node_modules/amazon-cognito-identity-js/dist/amazon-cognito-identity.js .",
+		"postinstall": "npm run cp-minjs",
 		"test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bob Lund",
