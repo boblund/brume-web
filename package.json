@@ -4,8 +4,9 @@
   "description": "Brume web files",
   "main": "index.mjs",
   "scripts": {
-    "mv_cognito": "mv -f ./node_modules/amazon-cognito-identity-js/dist/amazon-cognito-identity.min.js .",
-    "rm-node_modules": "rm -rf node_modules",
+    "cp-minjs": "cp ../node_modules/amazon-cognito-identity-js/dist/amazon-cognito-identity.min.js brume-web/",
+    "rm-node_modules": "shopt -s extglob; (cd node_modules; rm -rf !('brume-client-api'|'brume-web'))",
+		"postinstall": "npm run cp-minjs && npm run rm-node_modules",
 		"test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bob Lund",
