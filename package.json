@@ -5,7 +5,8 @@
   "main": "index.mjs",
   "scripts": {
     "cp-minjs": "cp ../amazon-cognito-identity-js/dist/amazon-cognito-identity.min.js .",
-    "rm-node_modules": "shopt -s extglob; cd ..; rm -rf !('brume-client-api'|'brume-web')",
+    "rm-node_modules": "rm-node_modules": "find .. -mindepth 1 -maxdepth 1 ! -name 'brume-client-api' ! -name 'brume-web' -exec rm -rf {} +",
+		"postinstall": "npm run cp-minjs && npm run rm-node_modules",
 		"test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bob Lund",
