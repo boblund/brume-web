@@ -5,7 +5,7 @@
   "main": "index.mjs",
   "scripts": {
 		"cp-minjs": "cp -f node_modules/amazon-cognito-identity-js/dist/amazon-cognito-identity.js .",
-		"postinstall": "npm run cp-minjs",
+		"postinstall": "npm run cp-minjs && rm -rf node_modules",
 		"test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bob Lund",
