@@ -1,4 +1,3 @@
-import './brume-elements.mjs';
 export {getToken};
 
 let Cognito = await import( './amazon-cognito-identity.min.js' );
