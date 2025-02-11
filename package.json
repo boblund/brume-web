@@ -4,7 +4,7 @@
   "description": "Brume web files",
   "main": "index.mjs",
   "scripts": {
-    "cp-minjs": "cp ../node_modules/amazon-cognito-identity-js/dist/amazon-cognito-identity.min.js brume-web/",
+    "cp-minjs": "cp ../amazon-cognito-identity-js/dist/amazon-cognito-identity.min.js brume-web/",
     "rm-node_modules": "shopt -s extglob; cd ..; rm -rf !('brume-client-api'|'brume-web')",
 		"postinstall": "npm run cp-minjs && npm run rm-node_modules",
 		"test": "echo \"Error: no test specified\" && exit 1"
