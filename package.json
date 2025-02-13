@@ -11,6 +11,9 @@
   },
   "author": "Bob Lund",
   "license": "CC-BY-NC-4.0",
+	"config": {
+    "install-strategy": "nested"
+  },
   "dependencies": {
     "amazon-cognito-identity-js": "^6.3.12"
   }
