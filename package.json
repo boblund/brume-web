@@ -2,10 +2,18 @@
   "name": "brume-web",
   "version": "1.0.0",
   "description": "Brume web files",
-  "main": "brumeLogin.mjs",
+  "main": "index.mjs",
   "scripts": {
+    "cp-minjs": "cp -f node_modules/amazon-cognito-identity-js/dist/amazon-cognito-identity.min.js .",
+    "postinstall": "npm run cp-minjs && rm -rf ./node_modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bob Lund",
-  "license": "CC-BY-NC-4.0"
+  "license": "CC-BY-NC-4.0",
+  "config": {
+    "install-strategy": "nested"
+  },
+  "dependencies": {
+    "amazon-cognito-identity-js": "^6.3.12"
+  }
 }
