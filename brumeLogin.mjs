@@ -1,5 +1,5 @@
 export { getToken };
-import { userPassAuth } from 'brume-auth';
+import { userPassAuth } from './node_modules/brume-auth/cognitoAuth.mjs';
 
 let brumeLogin = null;
 
@@ -38,7 +38,6 @@ async function processLogin() {
 		loginCallBack( { token: result.IdToken } );
 	}
 }
-
 
 function getToken() {
 	return new Promise( ( res, rej ) => {
