@@ -9,6 +9,6 @@
   "author": "Bob Lund",
   "license": "CC-BY-NC-4.0",
   "dependencies": {
-    "brume-auth": "file:../brume-auth"
+    "brume-auth": "github:boblund/brume-auth#newauth"
   }
 }
